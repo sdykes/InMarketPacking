@@ -549,26 +549,34 @@ RPC initiated in-market packing operations in China through Joy Wing Mau (JWM) a
 ## Four Critical Strategic Points
 
 ### 1. **Partner performance gap Requires Immediate Action**
+
 **Joy Wing Mau significantly outperforms VX Logistics** 
+
 * JWM total yield: **62.8%** vs VX: **55.5%** (7.3% point advantage) 
 * JWM secondary packout: **72.6%** vs VX: **65.8%** 
 * **Recommendation:** Review VX performance relative to JWM 
 
 ### 2. **Quality issues threaten brand integrity**
+
 **Mechanical damage nearly doubled during in-market processing** 
+
 * Primary packing damage: **9.52%** and Secondary packing damage: **18.28%** 
 * Potential root causes: double handling inherent in the in-market model, susceptibility of the fruit given the low pressure year, relative under-grading at Sunfruit compared to Te Ipu. 
 * **Recommendation:** Implement immediate quality protocols across the supply chain or risk a decline in losses and customer satisfaction. 
 
 ### 3. **Packhouse Performance Disparity Impacts profitability of in-market operation** 
+
 **Te Ipu consistently outperforms Sunfruit across all quality metrics** 
+
 * Te Ipu secondary packout: **70.8%** vs Sunfruit: **63.8%** (7.0% advantage) 
 * Calyx burn defects: Sunfruit **6.04%** vs Te Ipu **1.06%** 
 * Mechanical defects: Sunfruit **19.28%** vs Te Ipu **13.71%** 
 * **Recommendation:** Operations and investigate and address Sunfruit quality issues. A commercial analysis should be conducted to assess the viaility of in-market packet and the break-even points with regard to yield expectations. 
 
 ### 4. **Transit pack format innovation shows strategic promise** 
+
 **MB format cartons deliver superior performance over traditional export bins** 
+
 * MB Format secondary packout: **84.5%** vs Export Bins: **70.8%** (13.7% improvement) 
 * Statistical significance confirmed across all trials 
 * Limited 
