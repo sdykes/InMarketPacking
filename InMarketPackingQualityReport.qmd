@@ -10,7 +10,7 @@ library(flextable)
 
 knitr::opts_chunk$set(echo = F, message = F, warning = F)
 
-source("../CommonFunctions/getSQL.r")
+source("getSQL.r")
 
 VXReportDate <- as.Date("2025-07-28")
 VXDefectReportDate <- as.Date("2025-07-28")
