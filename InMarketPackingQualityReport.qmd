@@ -1,4 +1,3 @@
-
 ```{r}
 #| label: initialisation
 #| message: false
@@ -17,8 +16,6 @@ VXDefectReportDate <- as.Date("2025-07-28")
 JWMReportDate <- as.Date("2025-07-25")
 
 ```
-
-
 
 ```{r}
 #| label: InitialDataDownload
@@ -497,7 +494,6 @@ VX2025ParsedRepacking2 <- VX2025ParsedRepacking |>
 
 ```
 
-
 ```{r}
 #| label: FirstTableDataCleaning
 
@@ -542,6 +538,7 @@ PFRSummaryNonExportBinsTotal <- PFRSummaryNonExportBins |>
 ```
 
 # Executive Summary
+
 **Key Findings for Board & Senior Leadership**
 
 RPC initiated in-market packing operations in China through Joy Wing Mau (JWM) and VX Logistics to address **local capacity constraints** and **delay capital expansion** requirements in New Zealand, while building strategic capability in key markets for supply chain resilience.
@@ -550,42 +547,41 @@ RPC initiated in-market packing operations in China through Joy Wing Mau (JWM) a
 
 ### 1. **Partner performance gap Requires Immediate Action**
 
-**Joy Wing Mau significantly outperforms VX Logistics** 
+**Joy Wing Mau outperforms VX Logistics in terms of secondary packout and total yield**
 
-* JWM total yield: **62.8%** vs VX: **55.5%** (7.3% point advantage) 
-* JWM secondary packout: **72.6%** vs VX: **65.8%** 
-* **Recommendation:** Review VX performance relative to JWM 
+-   JWM total yield: **62.8%** vs VX: **55.5%** (7.3% point advantage)
+-   JWM secondary packout: **72.6%** vs VX: **65.8%**
+-   **Recommendation:** Review VX performance relative to JWM
 
 ### 2. **Quality issues threaten brand integrity**
 
-**Mechanical damage nearly doubled during in-market processing** 
+**Mechanical damage nearly doubled during in-market processing**
 
-* Primary packing damage: **9.52%** and Secondary packing damage: **18.28%** 
-* Potential root causes: double handling inherent in the in-market model, susceptibility of the fruit given the low pressure year, relative under-grading at Sunfruit compared to Te Ipu. 
-* **Recommendation:** Implement immediate quality protocols across the supply chain or risk a decline in losses and customer satisfaction. 
+-   Primary packing damage: **9.52%** and Secondary packing damage: **18.28%**
+-   Potential root causes: double handling inherent in the in-market model, susceptibility of the fruit given the low pressure year, relative under-grading at Sunfruit compared to Te Ipu.
+-   **Recommendation:** Implement immediate quality protocols across the supply chain or risk a decline in losses and customer satisfaction.
 
-### 3. **Packhouse Performance Disparity Impacts profitability of in-market operation** 
+### 3. **Packhouse Performance Disparity Impacts profitability of in-market operation**
 
-**Te Ipu consistently outperforms Sunfruit across all quality metrics** 
+**Te Ipu consistently outperforms Sunfruit across all quality metrics**
 
-* Te Ipu secondary packout: **70.8%** vs Sunfruit: **63.8%** (7.0% advantage) 
-* Calyx burn defects: Sunfruit **6.04%** vs Te Ipu **1.06%** 
-* Mechanical defects: Sunfruit **19.28%** vs Te Ipu **13.71%** 
-* **Recommendation:** Operations and investigate and address Sunfruit quality issues. A commercial analysis should be conducted to assess the viaility of in-market packet and the break-even points with regard to yield expectations. 
+-   Te Ipu secondary packout: **70.8%** vs Sunfruit: **63.8%** (7.0% advantage)
+-   Calyx burn defects: Sunfruit **6.04%** vs Te Ipu **1.06%**
+-   Mechanical defects (at secondary packout stage): Sunfruit **19.28%** vs Te Ipu **13.71%**
+-   **Recommendation:** Operations and investigate and address Sunfruit quality issues. A commercial analysis should be conducted to assess the viaility of in-market packet and the break-even points with regard to yield expectations.
 
-### 4. **Transit pack format innovation shows strategic promise** 
+### 4. **Transit pack format innovation shows strategic promise**
 
-**MB format cartons deliver superior performance over traditional export bins** 
+**MB format cartons deliver superior performance over traditional export bins**
 
-* MB Format secondary packout: **84.5%** vs Export Bins: **70.8%** (13.7% improvement) 
-* Statistical significance confirmed across all trials 
-* Limited 
-* **Recommendation:** Accelerate MB format trials and scale 
+-   MB Format secondary packout: **84.5%** vs Export Bins: **70.8%** (13.7% improvement)
+-   Statistical significance confirmed across all trials
+-   Limited
+-   **Recommendation:** Accelerate MB format trials and scale
 
 In-market packing successfully addresses capacity constraints but requires immediate optimisation to protect product quality and brand reputation. Focus on improving the Sunfruit and VX performance, quality improvements across the supply chain to support these ends, and continue to identify and scale format innovations.
 
 {{< pagebreak >}}
-
 
 ## Introduction
 
@@ -595,16 +591,15 @@ The motivation for in-market packing was two-fold: primarily to mitigate local (
 
 A critical issue with in-market packing is that the fruit is handled twice before it is packed into finished goods packaging. Rockit™ apples have traditionally have been particularly susceptible to mechanical damage (brusies, punctures and cuts) moreover the relatively high surface area to volume ratio of the Rockit™ apple make the fruit prone to shrivel later in the season.
 
-The aim of this report is to summerise the In-market packing performance (hitherto including Joy Wing Mau and VX), and present the information in a way to provide the reader insights into production and quality performance.  Some recommendations will be given if the insights are clear and unequivocal. 
+The aim of this report is to summerise the In-market packing performance (hitherto including Joy Wing Mau and VX), and present the information in a way to provide the reader insights into production and quality performance. Some recommendations will be given if the insights are clear and unequivocal.
 
-This report uses production data from VX and Joy Wing Mau published on the `r format(VXReportDate, "%d %B %Y")` and `r format(JWMReportDate, "%d %B %Y")` respectively.  The VX defect data was taken from the defect report published on `r format(VXDefectReportDate, "%d %B %Y")`.
+This report uses production data from VX and Joy Wing Mau published on the `r format(VXReportDate, "%d %B %Y")` and `r format(JWMReportDate, "%d %B %Y")` respectively. The VX defect data was taken from the defect report published on `r format(VXDefectReportDate, "%d %B %Y")`.
 
 ## Scale of In-market packing in 2025
 
 ### Bins packed
 
-At the time of this report being published (`r format(Sys.Date(), "%d %B %Y")`) `r scales::comma(PFRSummaryExportBinsTotal[[1,4]],1.0)` export bins had been packed in New Zealand.  A breakdown of the bins by type is given in @tbl-BinsPackedYTD.  @tbl-NonExpBinsPackedYTD shows the number of non-export bin repack formats that have been produced in New Zealand YTD.  These inlcude both z-packs and the newly trialled MB format carton.
-
+At the time of this report being published (`r format(Sys.Date(), "%d %B %Y")`) `r scales::comma(PFRSummaryExportBinsTotal[[1,4]],1.0)` export bins had been packed in New Zealand. A breakdown of the bins by type is given in @tbl-BinsPackedYTD. @tbl-NonExpBinsPackedYTD shows the number of non-export bin repack formats that have been produced in New Zealand YTD. These inlcude both z-packs and the newly trialled MB format carton.
 
 ```{r}
 #| label: tbl-BinsPackedYTD
@@ -704,9 +699,9 @@ ZPackSummaryTotal <- ZPackSummary |>
 
 ### Bins shipped
 
-The number of bins and cartons shipped to in-market repackers is given in tables [-@tbl-ExportBinsShippedYTD] and [-@tbl-NonExportBinsShippedYTD] is split by Repacker and size profile. As of the `r format(Sys.Date(),"%d %B %Y")` the number of export bins shipped to repackers was `r scales::comma(ExportBinSummaryTotal[[1,4]],1.0)`.  In terms of Non-export bin repack formats `r scales::comma(ZPackSummaryTotal[[1,6]]+ZPackSummaryTotal[[1,7]]+ZPackSummaryTotal[[1,8]],1.0)` cartons have been shipped YTD for 2025.
+The number of bins and cartons shipped to in-market repackers is given in tables [-@tbl-ExportBinsShippedYTD] and [-@tbl-NonExportBinsShippedYTD] is split by Repacker and size profile. As of the `r format(Sys.Date(),"%d %B %Y")` the number of export bins shipped to repackers was `r scales::comma(ExportBinSummaryTotal[[1,4]],1.0)`. In terms of Non-export bin repack formats `r scales::comma(ZPackSummaryTotal[[1,6]]+ZPackSummaryTotal[[1,7]]+ZPackSummaryTotal[[1,8]],1.0)` cartons have been shipped YTD for 2025.
 
-Note the `r scales::comma(ZPackSummaryTotal[[1,7]],1.0)` cartons (3 containers) that have been shipped to Pomina in Taiwan as a trial.  This is in addition to the two repackers used in P.R.China.
+Note the `r scales::comma(ZPackSummaryTotal[[1,7]],1.0)` cartons (3 containers) that have been shipped to Pomina in Taiwan as a trial. This is in addition to the two repackers used in P.R.China.
 
 ```{r}
 #| label: tbl-ExportBinsShippedYTD
@@ -744,15 +739,13 @@ ZPackSummary |>
 
 ```
 
-
-
 ## Packout summaries
 
-Tables [-@tbl-VXPackoutSummaries] and [-@tbl-JWMPackoutSummaries] show the primary and secondary packouts, and total yield (i.e. yield of fruit packed into finished products as a proportion of harvested fruit).  These are calculated on a weighted average basis.  The table also defines four storage phases:
+Tables [-@tbl-VXPackoutSummaries] and [-@tbl-JWMPackoutSummaries] show the primary and secondary packouts, and total yield (i.e. yield of fruit packed into finished products as a proportion of harvested fruit). These are calculated on a weighted average basis. The table also defines four storage phases:
 
-1.	Field bins storage days (i.e. date harvested to the date of primary packing in NZ)
-2.	Finished goods storage (i.e. the date from primary packing until the finished goods are shipped)
-3.	Transit days (i.e. the date from shipping to the arrival date at the destination port) 
+1.  Field bins storage days (i.e. date harvested to the date of primary packing in NZ)
+2.  Finished goods storage (i.e. the date from primary packing until the finished goods are shipped)
+3.  Transit days (i.e. the date from shipping to the arrival date at the destination port)
 4.  Repack storage days (i.e. the arrival date at the port to the date of repacking)
 
 While tables [-@tbl-VXPackoutSummaries] and [-@tbl-JWMPackoutSummaries] presents the weighted mean values these are useful as predictor variables when attempting to estimate final yields.
@@ -931,7 +924,6 @@ VXPackSiteSummary |>
 
 ```
 
-
 ```{r}
 #| label: tbl-JWMPackoutSummaries
 #| tbl-cap: "Packout summary for fruit processed at Joy Wing Mau (as of 25 Jul 2025)"
@@ -1028,7 +1020,7 @@ JWMYieldStatsByPacker |>
   
 ```
 
-@fig-VXPackouts and @fig-JWMPackouts show the same data for each repacking site but in histogram form. 
+@fig-VXPackouts and @fig-JWMPackouts show the same data for each repacking site but in histogram form.
 
 ```{r}
 #| label: fig-VXPackouts
@@ -1073,6 +1065,7 @@ VXABCRecoSummary |>
 
 
 ```
+
 ```{r}
 #| label: fig-JWMPackouts
 #| fig-cap: "Joy Wing Mau repack batches packout distribution"
@@ -1114,11 +1107,12 @@ temp |>
         legend.title = element_text(size = 8))
 
 ```
-Note that for both the VX and JWM secondary packouts (figures [-@fig-VXPackouts-1] and [-@fig-JWMPackouts-1]) there is a visible bias of Te Ipu fruit positioned to the right of the mean (as indicated by the black vertical line).  In terms of the total yield (figures [-@fig-VXPackouts-2] and [-@fig-JWMPackouts-2]) the distribution of Te Ipu fruit appears more centred around the mean value.  This can be explained by understanding that the Te Ipu fruit is manually, as well as machine graded and hence, generally has a lower primary packout than the equivalent Sunfruit batch.  This is balanced out in the total yield after a secondary grading step.
+
+Note that for both the VX and JWM secondary packouts (figures [-@fig-VXPackouts-1] and [-@fig-JWMPackouts-1]) there is a visible bias of Te Ipu fruit positioned to the right of the mean (as indicated by the black vertical line). In terms of the total yield (figures [-@fig-VXPackouts-2] and [-@fig-JWMPackouts-2]) the distribution of Te Ipu fruit appears more centred around the mean value. This can be explained by understanding that the Te Ipu fruit is manually, as well as machine graded and hence, generally has a lower primary packout than the equivalent Sunfruit batch. This is balanced out in the total yield after a secondary grading step.
 
 ## Preliminary comparison of export bins vs MB formats for fruit packed at VX
 
-A container of Rockit™ apple was shiped to VX from Te Ipu that had been packed in MB format cartons on 30 April 2025. These pallets were repacked at VX into finished goods (63/3 and 63/3T tubes) on 04 June 2025.  A further 16 pallets of z-pack cartons (containing 63T fruit)  were processed at VX on 07 Jul 2025.  A summary of each consignment is given in @tbl-VXPackoutSummaries.  In terms of the distribution of the secondary packouts,  these are presented in @fig-MBvsEBDist  
+A container of Rockit™ apple was shiped to VX from Te Ipu that had been packed in MB format cartons on 30 April 2025. These pallets were repacked at VX into finished goods (63/3 and 63/3T tubes) on 04 June 2025. A further 16 pallets of z-pack cartons (containing 63T fruit) were processed at VX on 07 Jul 2025. A summary of each consignment is given in @tbl-VXPackoutSummaries. In terms of the distribution of the secondary packouts, these are presented in @fig-MBvsEBDist
 
 ```{r}
 #| label: fig-MBvsEBDist
@@ -1170,11 +1164,9 @@ VXABCRecoSummary |>
 
 ```
 
-
 ## Preliminary comparison of Export Bin vs Z-pack cartons for fruit already packed at Joy Wing Mau
 
-Two small batches of 72mm fruit were repacked at JWM from z-packs in 2025.  This is presented in @fig-JWMZPacks as function of secondary packout and in histogram form.  This clearly shows that the z-packs deliver a higher secondary packout than the export bins.  This result, however should be treated with caution as the sample of z-packs was relatively small (707 cartons) compared to the mass of fruit in export bins.  More boxed fruit will be processed at VX and Joy Wing Mau and the results will be analyses to see if the difference in overall yield is maintained.
-
+Two small batches of 72mm fruit were repacked at JWM from z-packs in 2025. This is presented in @fig-JWMZPacks as function of secondary packout and in histogram form. This clearly shows that the z-packs deliver a higher secondary packout than the export bins. This result, however should be treated with caution as the sample of z-packs was relatively small (707 cartons) compared to the mass of fruit in export bins. More boxed fruit will be processed at VX and Joy Wing Mau and the results will be analyses to see if the difference in overall yield is maintained.
 
 ```{r}
 #| label: fig-JWMZPacks
@@ -1203,9 +1195,7 @@ temp |>
 
 ## Defect Profile for VX fruit
 
-VX have implemented a relatively sophisticated defect logging system.  The defect profile observed at VX during the repacking operation is summarized in @fig-VXdefects. The most significant difference in the primary and secondary packing defects is the increase in mechanical damage (Punctures, cut and bruising) 19.28% at VX vs approximately 13.71% at primary packout at Te Ipu.  Calyx burn is another serious disorder (typically caused by lesions in the waxy cuticle around the calyx and exposure to a strong oxidant [e.g. hypochlorite] during the bin tip process).  The concentration of disinfectatnt has been lowered as a result of the observed high incidence.  Stem tears are another unusual defect (3.37% at VX compared to 1.82% at Te Ipu).  Presumably Sunfruit has no capability to grade out fruit with the stems removed and hence they are being graded out at the repacking facility.  The last disorder to comment on is shrivel, which is a latent condition and is not observed at Te Ipu and yet makes up 1.12% of the crop.  This will need to be monitored as the season progresses.
-
-
+VX have implemented a relatively sophisticated defect logging system. The defect profile observed at VX during the repacking operation is summarized in @fig-VXdefects. The most significant difference in the primary and secondary packing defects is the increase in mechanical damage (Punctures, cut and bruising) 19.28% at VX vs approximately 13.71% at primary packout at Te Ipu. Calyx burn is another serious disorder (typically caused by lesions in the waxy cuticle around the calyx and exposure to a strong oxidant \[e.g. hypochlorite\] during the bin tip process). The concentration of disinfectatnt has been lowered as a result of the observed high incidence. Stem tears are another unusual defect (3.37% at VX compared to 1.82% at Te Ipu). Presumably Sunfruit has no capability to grade out fruit with the stems removed and hence they are being graded out at the repacking facility. The last disorder to comment on is shrivel, which is a latent condition and is not observed at Te Ipu and yet makes up 1.12% of the crop. This will need to be monitored as the season progresses.
 
 ```{r}
 #| label: fig-VXdefects
@@ -1306,8 +1296,7 @@ Top10_DefectSummary |>
 
 ### Defect profile by original packing site
 
-@fig-VXdefectsByPackSite shows the difference in (secondary packout) defect profile between fruit originally packed Te Ipu and Sunfruit.  There are two striking differences between the two profiles: fistly the greater level of mechanical damage from Sunfruit compared to Te Ipu.  This is across both the bruising and punctures/cuts categories.  The second major difference is in the level of Calyx burn, with Sunfruit recording 6.10% compared to Te Ipu at 1.07%. 
-
+@fig-VXdefectsByPackSite shows the difference in (secondary packout) defect profile between fruit originally packed Te Ipu and Sunfruit. There are two striking differences between the two profiles: fistly the greater level of mechanical damage from Sunfruit compared to Te Ipu. This is across both the bruising and punctures/cuts categories. The second major difference is in the level of Calyx burn, with Sunfruit recording 6.10% compared to Te Ipu at 1.07%.
 
 ```{r}
 #| label: fig-VXdefectsByPackSite
@@ -1371,12 +1360,13 @@ Top10_DefectSummaryPS |>
 
 ### Defect profile by packing format
 
-Recently MB format transit packs were repacked at VX.  The resulting defect profiles are compared in @fig-VXdefectsByPackType.  While only 20 pallets of MB Format cartons were repacked (compared to 1,729 export bins).  The difference in the defect profile however is notable.  There is a large difference in the level of mechanical damage across all measured categories with export bins exhibiting higher incidence of both bruising and punctures/cuts.  Interestingly Calyx burn is very similar across both formats (when considering all export bins).  Incidence of stem tears and cosmetic blemish are similarly fewer in the MB format compareed to export bins.  
+Recently MB format transit packs were repacked at VX. The resulting defect profiles are compared in @fig-VXdefectsByPackType. While only 20 pallets of MB Format cartons were repacked (compared to 1,729 export bins). The difference in the defect profile however is notable. There is a large difference in the level of mechanical damage across all measured categories with export bins exhibiting higher incidence of both bruising and punctures/cuts. Interestingly Calyx burn is very similar across both formats (when considering all export bins). Incidence of stem tears and cosmetic blemish are similarly fewer in the MB format compareed to export bins.
 
 #### Defect profile by packing format and primary packing site
 
-Given that all of the orginal consignment of MB format fruit was packed at Te Ipu a more valid comparison of defect profile would be against only fruit that was orginaly packed at Te Ipu.^[Packing site is one of a number of variables that are expected to have an impact on the in-market packing performance.] Given this is a convenient analysis to perform it is presented in @fig-MBvsEXPForTI.  
+Given that all of the orginal consignment of MB format fruit was packed at Te Ipu a more valid comparison of defect profile would be against only fruit that was orginaly packed at Te Ipu.[^inmarketpackingqualityreport-1] Given this is a convenient analysis to perform it is presented in @fig-MBvsEXPForTI.
 
+[^inmarketpackingqualityreport-1]: Packing site is one of a number of variables that are expected to have an impact on the in-market packing performance.
 
 ```{r}
 #| label: fig-VXdefectsByPackType
@@ -1500,20 +1490,20 @@ Top10_DefectSummaryTIPT |>
 
 ## Statistical analysis of the effect of primary packing site and pack format on secondary packout for VX
 
-While a more comprehensive regression analysis is desirable to understand the important variables that drive the secondary packout performance a simple two-factor analysis of variance (ANOVA) is run using secondary packout as the independent variable and primary pack site and pack format as the independent or predictor variable (note both variable are categorical).  The ANOVA is stated mathematically in @eq-ANOVA.
+While a more comprehensive regression analysis is desirable to understand the important variables that drive the secondary packout performance a simple two-factor analysis of variance (ANOVA) is run using secondary packout as the independent variable and primary pack site and pack format as the independent or predictor variable (note both variable are categorical). The ANOVA is stated mathematically in @eq-ANOVA.
 
 $$\upsilon_{ijk}^{2}=\mu+\alpha_{i}+\beta_{j}+\epsilon_{ijk}$$ {#eq-ANOVA}
 
-Where:  
+Where:
 
-$\upsilon^{2}$ = secondary packout  
-$\mu$ = weighted population average for the secondary packout  
-$\alpha$ = the main effect for packing site  
-$\beta$ = the main effect for pack format  
-$\epsilon$ = the random error term  
-$i$ = the number of levels of packing site (i.e. = 2, Te Ipu and Sunfruit)  
-$j$ = the number of levels of pack formats (i.e. = 2, export bins and MB format)  
-$k$ = the number of observations per treatment  
+$\upsilon^{2}$ = secondary packout\
+$\mu$ = weighted population average for the secondary packout\
+$\alpha$ = the main effect for packing site\
+$\beta$ = the main effect for pack format\
+$\epsilon$ = the random error term\
+$i$ = the number of levels of packing site (i.e. = 2, Te Ipu and Sunfruit)\
+$j$ = the number of levels of pack formats (i.e. = 2, export bins and MB format)\
+$k$ = the number of observations per treatment
 
 Using the provided VX data the results for the two-way ANOVA are given in @tbl-TwoWayANOVA:
 
@@ -1560,15 +1550,15 @@ ANOVATemp |>
 
 ```
 
-@tbl-TwoWayANOVA shows that both factors (Packing site and Pack format) are significant (i.e. the probability of the effect being zero is very small). There is a 6.5% improvement in secondary packout for fruit being primary packed at Te Ipu compared to Sunfruit.  Similarly for fruit packed in MB format cartons compared to export bins at Te Ipu there is an 8.0% improvement which is also significant.
+@tbl-TwoWayANOVA shows that both factors (Packing site and Pack format) are significant (i.e. the probability of the effect being zero is very small). There is a 6.5% improvement in secondary packout for fruit being primary packed at Te Ipu compared to Sunfruit. Similarly for fruit packed in MB format cartons compared to export bins at Te Ipu there is an 8.0% improvement which is also significant.
 
-It should, however, be noted that the Anova is very unbalanced with only a relatively small sample of fruit being processed in the MB format.  To some extent this is taken into account in the analysis and the result should be regarded as promising for the use of MB format cartons. 
+It should, however, be noted that the Anova is very unbalanced with only a relatively small sample of fruit being processed in the MB format. To some extent this is taken into account in the analysis and the result should be regarded as promising for the use of MB format cartons.
 
 ## Analysis of calyx burn from different pack sites
 
-Calyx burn is a defect that has not been historically prevalent in Rockit™ apples.  The disorder depends on the presence of micro-cracking around the calyx area of the apple combined with exposure to a strong oxidant such as hypochlorite (active ingredient in the disinfectant typically used in water dumps during the packing operation) [@lallu_studies_2010].  
+Calyx burn is a defect that has not been historically prevalent in Rockit™ apples. The disorder depends on the presence of micro-cracking around the calyx area of the apple combined with exposure to a strong oxidant such as hypochlorite (active ingredient in the disinfectant typically used in water dumps during the packing operation) [@lallu_studies_2010].
 
-When this disorder was identified changes were made to the concentration of the oxidant at both Sunfruit and Te Ipu packhouse in an attempt to mitigate the problem. The impact of the reduction in the incidence of calyx burn during the secondary ackout (at the VX facility in China) can be seen in the months of April and May (compared to March) in @fig-CalyxBurn. Relatively high levels of Calyx burn have been observed on batch that have were packed in late may.  The progression of Calyx burn will be monitored through out the season.
+When this disorder was identified changes were made to the concentration of the oxidant at both Sunfruit and Te Ipu packhouse in an attempt to mitigate the problem. The impact of the reduction in the incidence of calyx burn during the secondary ackout (at the VX facility in China) can be seen in the months of April and May (compared to March) in @fig-CalyxBurn. Relatively high levels of Calyx burn have been observed on batch that have were packed in late may. The progression of Calyx burn will be monitored through out the season.
 
 ```{r}
 #| label: fig-CalyxBurn
@@ -1611,9 +1601,10 @@ CalyxBurnMod |>
         legend.title = element_text(size = 8),
         strip.text = element_text(margin = margin(b=10), size = 10))
 ```
+
 ## Effect of packout on storage days
 
-One of the main predictors of primary packout is storage days (in field bins).  Extrapolating this to the in-market packing the four phases of storage described above are plotted in the left-hand chart (by batch) for VX fruit in @fig-POVSSD. The right-hand chart shows the three packouts (primary, secondary and total yield) for each of the batches.  What can be seen is that the primary packout (this calculated on a weighted average basis for each batch) remains consistent over the range of storage days analysed.  Secondary packout begins relatively low then increases to when total storage days are between 60 and 70 and then begins decreasing as storage days increase.  From this analysis it is apparent that storage days is not the only predictor driving secondary packout.
+One of the main predictors of primary packout is storage days (in field bins). Extrapolating this to the in-market packing the four phases of storage described above are plotted in the left-hand chart (by batch) for VX fruit in @fig-POVSSD. The right-hand chart shows the three packouts (primary, secondary and total yield) for each of the batches. What can be seen is that the primary packout (this calculated on a weighted average basis for each batch) remains consistent over the range of storage days analysed. Secondary packout begins relatively low then increases to when total storage days are between 60 and 70 and then begins decreasing as storage days increase. From this analysis it is apparent that storage days is not the only predictor driving secondary packout.
 
 ```{r}
 #| label: fig-POVSSD
@@ -1673,7 +1664,7 @@ PointChart <- VXABCRecoSummary |>
                values_to = "Yield") |>
   select(c(index, `Packing phase`, Yield)) |>
   ggplot(aes(x=index, y=Yield, colour = `Packing phase`)) +
-  geom_point(alpha = 0.5) +
+  geom_point(alpha = 0.5, size = 1) +
   geom_smooth(method = "loess") +
   labs(x = "Batch") +
   scale_y_continuous(labels = scales::label_percent(1.0)) +
@@ -1697,12 +1688,12 @@ cowplot::plot_grid(BarChart,PointChart, align = "h", ncol=1, axis ="lr")
 
 ```
 
-
 ## Future work/trials
 
-In addition to the transit pack format trials, discussions are underway with Plant & Food and Massey University to look at characterizing the strength of the Rockit apple using apparatus and methodology developed for the Kiwifruit industry.  Preliminary (proof of concept) experiments are being planned for 2025.  
+In addition to the transit pack format trials, discussions are underway with Plant & Food and Massey University to look at characterising the mechanical strength (in terms of Young's modulus) of the Rockit™ apple using apparatus and methodology developed for the Kiwifruit industry. Preliminary (proof of concept) experiments are being planned for 2025.
 
-Further analysis work is ongoing with looking at the effects of low pressure and SPI to fruit strength and manifest defects. Hormones applied at harvest (e.g. Ethrel and Harvista) are also being analyses to better understand if any correlation exists between fruit storability and physiological condition.  This will likely result in machine learning models that will be able to give some insight into the drivers of transit losses and to provide prediction of fruit already in the supply chain.
+Further analysis work is ongoing with looking at the effects of low pressure and SPI on the mechanical strength of the fruit and manifest defects. Hormones applied at harvest (e.g. Ethrel™ and Harvista™) are also being analysed to better understand if any correlation exists between fruit storability and physiological condition. This will likely result in machine learning models that will be able to give some insight into the drivers of transit losses and to provide prediction of fruit already in the supply chain.
 
-## References 
+This paper only covers repacking activities (i.e. When fruit is repacked from transit packs to finished goods in market).  There has been considerable rework that has occurred particularly at the VX facility.  This is important in understanding and estimating final yields of finished goods that have been packed in New Zealand.  The rework analysis will be presented in a separate paper.
 
+## References
